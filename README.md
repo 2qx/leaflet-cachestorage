@@ -13,7 +13,7 @@ Import the plugin with:
     <script src="js/leaflet/leaflet.cachestorage.js"></script>
    
    
-When configuring your map later pass the following parameters. The `useCache` parameter should probably test if the service worker endpoint is available, but this configuration works well for debugging. 
+When configuring your map later pass the following parameters. The `useCache` parameter should probably test if the ServiceWorker endpoint (`/offline-map-tiles`) is available, but this configuration works well for debugging. 
 
         var layer = L.tileLayer(mapTileProvider, 
             {
@@ -41,3 +41,5 @@ Uses the service worker to serve
     
     
 It should also be quite possible to refactor this to use a WebWorker or the main thread.      
+
+There is no cache cleaning or expiration.
